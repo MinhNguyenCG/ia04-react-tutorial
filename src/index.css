@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    @apply box-border;
+  }
+
+  body {
+    @apply font-sans m-0 min-h-screen flex justify-center items-center;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+  }
+
+  #root {
+    @apply w-full flex justify-center items-center;
+  }
+
+  /* Custom Scrollbar Styling */
+  ol::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ol::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+  }
+
+  ol::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+  }
+
+  ol::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+}
+
+@theme {
+  --color-primary-500: #667eea;
+  --color-primary-600: #5568d3;
+  --color-primary-700: #4c63d2;
+}
