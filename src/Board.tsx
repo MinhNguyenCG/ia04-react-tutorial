@@ -67,17 +67,17 @@ function Board({ xIsNext, squares, onPlay, winningLine }: BoardProps) {
   }
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col h-full min-h-0">
       {/* Status Bar */}
-      <div className="mb-6 px-4 py-3 bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl border border-gray-200 shadow-sm">
-        <div className="text-base font-semibold text-gray-800 text-center">
+      <div className="mb-2 sm:mb-3 md:mb-4 lg:mb-6 px-2.5 py-1.5 sm:px-3 sm:py-2 md:px-4 md:py-3 bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg sm:rounded-xl border border-gray-200 shadow-sm shrink-0">
+        <div className="text-xs sm:text-sm md:text-base font-semibold text-gray-800 text-center truncate px-1">
           {status}
         </div>
       </div>
 
       {/* Game Board */}
-      <div className="flex-1 flex items-center justify-center">
-        <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-5 rounded-2xl shadow-lg border border-gray-200">
+      <div className="flex-1 flex items-center justify-center min-h-0 overflow-auto py-1">
+        <div className="bg-gradient-to-br from-gray-50 to-gray-100 p-2 sm:p-3 md:p-4 lg:p-5 rounded-lg sm:rounded-xl md:rounded-2xl shadow-lg border border-gray-200 shrink-0">
           {boardRows}
         </div>
       </div>

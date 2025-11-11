@@ -9,11 +9,32 @@
     @apply font-sans m-0 min-h-screen flex justify-center items-center;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 20px;
+    padding: 8px;
+  }
+
+  @media (min-width: 640px) {
+    body {
+      padding: 20px;
+    }
+  }
+
+  /* Mobile landscape optimization */
+  @media (max-height: 500px) and (orientation: landscape) {
+    body {
+      padding: 8px;
+    }
   }
 
   #root {
     @apply w-full flex justify-center items-center;
+    min-height: 100vh;
+  }
+
+  /* Responsive container max-width */
+  @media (min-width: 1536px) {
+    #root > div {
+      max-width: 900px;
+    }
   }
 
   /* Custom Scrollbar Styling */
